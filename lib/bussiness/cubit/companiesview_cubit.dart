@@ -8,7 +8,7 @@ import '../../data/models/companies_list.dart';
 part 'companiesview_state.dart';
 
 class CompaniesviewCubit extends Cubit<CompaniesviewState> {
-  NetworkRepository _networkRepository;
+  final NetworkRepository _networkRepository;
   CompaniesviewCubit({required NetworkRepository networkRepository})
       : _networkRepository = networkRepository,
         super(CompaniesviewLoadingState()) {
