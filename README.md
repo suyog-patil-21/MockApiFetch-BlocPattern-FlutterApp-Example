@@ -1,6 +1,6 @@
-# companieslist
+# Simple Example of Apis using Bloc
 
-A new Flutter project.
+A new Flutter project. Fetch Api data from a Mock Server.
 
 ## Getting Started
 
