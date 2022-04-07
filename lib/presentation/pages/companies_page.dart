@@ -1,4 +1,4 @@
-import 'package:companieslist/bussiness/cubit/companiesview_cubit.dart';
+import '../../bussiness/cubit/companiesview_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

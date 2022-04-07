@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:companieslist/data/repository/network_repository.dart';
+import '../../data/repository/network_repository.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 

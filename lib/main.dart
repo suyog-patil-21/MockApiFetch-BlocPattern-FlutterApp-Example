@@ -1,6 +1,6 @@
-import 'package:companieslist/bussiness/cubit/companiesview_cubit.dart';
-import 'package:companieslist/data/repository/network_repository.dart';
-import 'package:companieslist/presentation/pages/companies_page.dart';
+import 'bussiness/cubit/companiesview_cubit.dart';
+import 'data/repository/network_repository.dart';
+import 'presentation/pages/companies_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

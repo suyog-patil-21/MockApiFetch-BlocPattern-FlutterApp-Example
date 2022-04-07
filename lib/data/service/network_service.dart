@@ -1,22 +1,22 @@
 import 'dart:io';
 
-import 'package:companieslist/globals/custom_error.dart';
 import 'package:http/http.dart' as http;
+
+import '../../globals/custom_error.dart';
 
 class NetworkService {
   static const String baseURL = 'https://demo1779595.mockable.io';
-  static Future<dynamic> postCompaniesList() async {
+  static Future<String> postCompaniesList() async {
     final uri = Uri.parse(baseURL + '/companies');
     try {
       final response = await http.post(uri);
       if (response.statusCode == 200) {
         return response.body;
       } else {
-        print("status Code : " + response.statusCode.toString());
-        print(response.body);
+        throw CustomError('Cannot Find Data');
       }
-    } catch (err) {
-      print(err.toString());
+    } on SocketException {
+      throw CustomError('No Internet Connection');
     }
   }
 }

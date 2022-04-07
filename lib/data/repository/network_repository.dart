@@ -1,9 +1,15 @@
-import 'package:companieslist/data/models/companies_list.dart';
-import 'package:companieslist/data/service/network_service.dart';
+import '../models/companies_list.dart';
+import '../service/network_service.dart';
+
+import '../../globals/custom_error.dart';
 
 class NetworkRepository {
   Future<CompaniesListModel> getCompanyList() async {
-    final result = await NetworkService.postCompaniesList();
-    return companiesListFromJson(result);
+    try {
+      final result = await NetworkService.postCompaniesList();
+      return companiesListFromJson(result);
+    } on FormatException {
+      throw CustomError('Bad Request Format');
+    }
   }
 }
